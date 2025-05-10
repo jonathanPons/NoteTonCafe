@@ -21,7 +21,7 @@
 
   /*taille du texte */
 
-  --text-base: 1rem;
+  --text-base: 0.8rem;
   --text-lg: 1.2rem;
 
   /*taille de conteneurs */
@@ -168,14 +168,15 @@ footer p {
   color: brown;
 }
 
-/* MEDIA QUERIE LAPTOP 1024px */
+/* MEDIA QUERIE LAPTOP 768px */
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   #burger {
     display: none;
   }
@@ -184,21 +185,42 @@ footer p {
     position: static;
     transform: none;
     flex-direction: row;
-    width: 50%;
+
     align-items: center;
   }
   #mobile-menu ul {
     display: flex;
     flex-direction: row;
+
     list-style: none;
     gap: 2rem;
   }
-  #mobile-menu ul li:hover {
+  #mobile-menu ul li {
+    font-size: var(--text-base);
+  }
+
+  #mobile-menu ul li a:hover {
     color: brown;
     cursor: pointer;
   }
 
   #CloseNav {
     display: none;
+  }
+
+  /* MAIN LAPTOP */
+
+  main {
+    max-width: 70ch; /* Largeur basée sur ~70 caractères, lisible */
+    padding: 1rem 5vw; /* Padding responsive avec l’écran */
+    margin: 1rem auto;
+  }
+  .presentation {
+    background-image: url(Images/pexels-machine.webp);
+    object-fit: cover;
+    background-size: cover; /* Remplit l’espace sans déformation */
+    background-position: center; /* Centre l’image */
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-attachment: scroll;
   }
 }
