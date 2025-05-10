@@ -71,14 +71,16 @@ header a {
   justify-content: center;
   width: 100%;
 }
-.presentation button {
+.button a {
   background-color: var(--color-background);
   padding: 0.55rem 0.8rem !important;
   border: 1px solid var(--color-text);
   margin: 10px;
   border-radius: 25px;
   font-weight: bold;
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
+  text-decoration: none;
+  color: #000000;
 }
 .presentation h1 {
   color: var(--color-background);
@@ -97,7 +99,7 @@ header a {
   cursor: pointer;
 }
 
-button:hover {
+.button a:hover {
   background-color: brown;
 }
 /*footer*/
@@ -126,6 +128,10 @@ footer p {
 }
 
 /* MENU MOBILE NAV */
+
+#burger {
+  cursor: pointer;
+}
 #mobile-menu {
   position: fixed;
   display: flex;
@@ -135,6 +141,7 @@ footer p {
   overflow-x: hidden;
   transform: translateX(-100%);
   transition: 0.8s ease-in-out;
+
   left: 0;
   top: 0;
   width: 100%;
@@ -144,6 +151,7 @@ footer p {
 
 #mobile-menu li {
   list-style: none;
+  cursor: pointer;
 }
 
 #mobile-menu.show {
@@ -158,4 +166,39 @@ footer p {
 
 #mobile-menu.show i:hover {
   color: brown;
+}
+
+/* MEDIA QUERIE LAPTOP 1024px */
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #burger {
+    display: none;
+  }
+  #mobile-menu {
+    display: flex;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+  }
+  #mobile-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+  }
+  #mobile-menu ul li:hover {
+    color: brown;
+    cursor: pointer;
+  }
+
+  #CloseNav {
+    display: none;
+  }
 }
