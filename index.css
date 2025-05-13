@@ -6,7 +6,11 @@
   box-sizing: border-box;
   font-family: var(--font-primary);
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 /* Variables */
 :root {
   /* Couleurs Principales */
@@ -18,7 +22,7 @@
   /*Polices  */
 
   --font-primary: "DM Sans", sans-serif;
-
+  --font-Titre: "Lora", serif;
   /*taille du texte */
 
   --text-base: 0.8rem;
@@ -42,6 +46,13 @@ header {
 }
 header h1 {
   font-size: var(--text-lg);
+  font-family: var(--font-Titre);
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+}
+header h1:hover {
+  color: b;
 }
 header a {
   text-decoration: none;
@@ -102,15 +113,22 @@ header a {
 .button a:hover {
   background-color: brown;
 }
+
+/* MAIN */
+main {
+  flex: 1;
+}
+
 /*footer*/
 footer {
   border-top: 2px solid var(--color-secondary);
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.2rem;
+
   align-items: center;
+  gap: 0.2rem;
+
   padding: 0.5rem 1rem;
   font-size: var(--text-base);
 }
@@ -120,7 +138,7 @@ footer a {
   text-align: center;
   cursor: pointer;
   margin: 1rem;
-  font-size: 0.6rem;
+  font-size: 0.4rem;
 }
 footer p {
   text-align: center;
@@ -147,6 +165,9 @@ footer p {
   width: 100%;
   height: 100%;
   padding: 0.5rem 0.5rem;
+}
+#mobile-menu li a.active {
+  color: brown;
 }
 
 #mobile-menu li {
@@ -224,3 +245,4 @@ footer p {
     background-attachment: scroll;
   }
 }
+/* Page Formulaire */
