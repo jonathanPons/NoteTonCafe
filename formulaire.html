@@ -6,6 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Play:wght@400;700&family=Playpen+Sans:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Play:wght@400;700&family=Playpen+Sans:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
@@ -50,10 +56,43 @@
       <main>
         <div class="container">
           <form action="" class="form-cafe">
-            <label for="lieu"> Où as-tu goûté ce café ?</label>
-            <select name="lieu" id="lieu"></select>
+            <h2>Où dégustes-tu ce café ?</h2>
+            <div id="choix-lieu">
+              <!--Étape 1 : Où dégustes-tu ce café ?-->
+              <button type="button" class="choix-btn" data-lieu="coffee-shop">
+                ☕️Coffee Shop
+              </button>
+              <button type="button" class="choix-btn" data-lieu="maison">
+                🏠 Chez moi
+              </button>
+              <button type="button" class="choix-btn" data-lieu="famille-Amis">
+                👨‍👩‍👧‍👦 Famille ou amis
+              </button>
+              <button type="button" class="choix-btn" data-lieu="autre">
+                🌍 Autre
+              </button>
+            </div>
+            <div class="section" id="info-exterieur">
+              <label for="nom-Lieu"> Nom du lieu : </label>
+              <input
+                type="text"
+                id="nom-Lieu"
+                placeholder="Syra Coffe, Toulouse"
+              />  <span class="croix" id="add-lieu-btn"> ➕ </span>
+             <div id="lieux-sauvegardes">
+  </div>
+
+              <label for="photo-Lieu"> Ajouter une photo du lieu </label>
+              <input type="file" id="photo-Lieu" accept="image/*" />
+            </div>
+
+            <!--Étape 2 : Préparation du café-->
+            <!--Étape 3 : Concentrons nous sur le café-->
+            <!--Étape 4 : Dégustation-->
+            <!--Étape 4 : Dégustation-->
           </form>
         </div>
+           
       </main>
 
       <footer>
@@ -69,6 +108,6 @@
       </footer>
 
       <script src="index.js"></script>
-    </div>
+ 
   </body>
 </html>

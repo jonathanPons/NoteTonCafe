@@ -158,7 +158,7 @@ footer p {
   position: absolute;
   overflow-x: hidden;
   transform: translateX(-100%);
-  transition: 0.8s ease-in-out;
+  transition: 0.4s ease-in-out;
 
   left: 0;
   top: 0;
@@ -189,6 +189,69 @@ footer p {
   color: brown;
 }
 
+/* PAGE FORMULAIRE */
+.container {
+  border: 1px solid yellow;
+  padding: 0.5rem 0.5rem;
+  font-family: var(--font-primary);
+  font-style: italic;
+  font-size: var(--text-base);
+}
+
+.container h2 {
+  font-family: "Red Hat Mono", monospace;
+  font-size: var(--text-lg);
+  text-align: center;
+  margin: 1rem;
+}
+#choix-lieu {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+.choix-btn {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  background-color: var(--color-background);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.choix-btn.active {
+  background-color: brown;
+  color: #ccc;
+  border-color: brown;
+}
+.section {
+  display: none;
+  padding: 0.5rem 0.5rem;
+}
+.section input {
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+}
+.croix {
+  font-style: normal;
+}
+.croix:hover {
+  color: brown;
+}
+#nouveaulieu {
+  text-align: center;
+  font-size: var(--text-lg);
+}
+
+.lieu-sauvegarde-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid blue;
+}
+.lieu-sauvegarde-text {
+  font-size: var(--text-lg);
+  font-family: var(--font-Titre);
+}
 /* MEDIA QUERIE LAPTOP 768px */
 
 @media (min-width: 768px) {
