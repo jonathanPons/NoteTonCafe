@@ -190,6 +190,8 @@ footer p {
 }
 
 /* PAGE FORMULAIRE */
+
+/* ETAPE 1 */
 .container {
   border: 1px solid yellow;
   padding: 0.5rem 0.5rem;
@@ -228,17 +230,11 @@ footer p {
 }
 .section input {
   border-radius: 0.3rem;
-  padding: 0.2rem;
+  padding: 0.5rem;
 }
 .croix {
   font-style: normal;
-}
-.croix:hover {
-  color: brown;
-}
-#nouveaulieu {
-  text-align: center;
-  font-size: var(--text-lg);
+  cursor: pointer;
 }
 
 .lieu-sauvegarde-wrapper {
@@ -246,11 +242,49 @@ footer p {
   justify-content: space-around;
   align-items: center;
   gap: 0.3rem;
-  border: 1px solid blue;
 }
 .lieu-sauvegarde-text {
   font-size: var(--text-lg);
   font-family: var(--font-Titre);
+  padding: 0.5rem;
+}
+
+.form-step button {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  background-color: var(--color-background);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ETAPE 2 */
+
+#preparation-cafe {
+  display: none;
+  gap: 0.4rem;
+}
+#preparation-cafe button {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  background-color: var(--color-background);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#preparation-cafe.active {
+  display: block;
+}
+.differente-prepa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.choix-prepa.active {
+  background-color: brown !important;
+  color: #ccc;
+  border-color: brown;
 }
 /* MEDIA QUERIE LAPTOP 768px */
 
@@ -308,4 +342,3 @@ footer p {
     background-attachment: scroll;
   }
 }
-/* Page Formulaire */

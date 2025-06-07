@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="index.css" />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,12 +60,13 @@
             <h2>Où dégustes-tu ce café ?</h2>
             <div id="choix-lieu">
               <!--Étape 1 : Où dégustes-tu ce café ?-->
-              <button type="button" class="choix-btn" data-lieu="coffee-shop">
-                ☕️Coffee Shop
-              </button>
               <button type="button" class="choix-btn" data-lieu="maison">
                 🏠 Chez moi
               </button>
+              <button type="button" class="choix-btn" data-lieu="coffee-shop">
+                ☕️Coffee Shop
+              </button>
+              
               <button type="button" class="choix-btn" data-lieu="famille-Amis">
                 👨‍👩‍👧‍👦 Famille ou amis
               </button>
@@ -79,17 +81,42 @@
                 id="nom-Lieu"
                 placeholder="Syra Coffe, Toulouse"
               />  <span class="croix" id="add-lieu-btn"> ➕ </span>
-             <div id="lieux-sauvegardes">
-  </div>
+             <div id="lieux-sauvegardes"> </div>
 
-              <label for="photo-Lieu"> Ajouter une photo du lieu </label>
+                <label for="photo-Lieu"> Ajouter une photo du lieu </label>
               <input type="file" id="photo-Lieu" accept="image/*" />
+              <div id="finish-step-one" class="form-step"><button type="button">Suivant</button></div>
+           
+             </div>
+ <!--Étape 2 : Préparation du café-->
+             <div  id="preparation-cafe">
+              <h2>Préparation du café</h2>
+              <div class="differente-prepa">
+               <button type="button" class="choix-prepa" data-prepa="Espresso">
+               Espresso
+              </button>
+              <button type="button" class="choix-prepa" data-prepa="Filtre">
+                Filtre
+              </button> <button type="button" class="choix-prepa" data-prepa="French-Press">
+                French Press
+              </button> <button type="button" class="choix-prepa" data-prepa="Aeropress">
+                Aeropress
+              </button> <button type="button" class="choix-prepa" data-prepa="Cafetière-Moka ">
+                Cafetière Moka 
+              </button></div>
+     
             </div>
+            <div class="marque-cafe"></div>
+ 
 
-            <!--Étape 2 : Préparation du café-->
+            
+
+           
+
+           
             <!--Étape 3 : Concentrons nous sur le café-->
             <!--Étape 4 : Dégustation-->
-            <!--Étape 4 : Dégustation-->
+           
           </form>
         </div>
            
