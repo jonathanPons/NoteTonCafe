@@ -126,3 +126,31 @@ boutonPrepa.forEach((unePrepa) => {
     const choixPrepa = unePrepa.dataset.prepa;
   });
 });
+
+// Marque du café ONLGET MAISON
+let lieuSelectionne = "";
+const marqueduCafe = document.getElementById("marque-cafe");
+
+//etapte1, enregistrer le lieu
+
+boutons.forEach((choixBTN) => {
+  choixBTN.addEventListener("click", () => {
+    boutons.forEach((b) => b.classList.remove("active"));
+    choixBTN.classList.add("active");
+    lieuSelectionne = choixBTN.dataset.lieu;
+    console.log(lieuSelectionne);
+  });
+});
+// Étape 2 : afficher la section marque/photo SEULEMENT si lieu = "maison"
+boutonPrepa.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    boutonPrepa.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    if (lieuSelectionne === "maison") {
+      marqueduCafe.style.display = "block";
+    } else {
+      marqueduCafe.style.display = "none";
+    }
+  });
+});
