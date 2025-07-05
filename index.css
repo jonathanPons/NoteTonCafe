@@ -52,7 +52,7 @@ header h1 {
   cursor: pointer;
 }
 header h1:hover {
-  color: b;
+  color: black;
 }
 header a {
   text-decoration: none;
@@ -224,13 +224,25 @@ footer p {
   color: #ccc;
   border-color: brown;
 }
+
 .section {
   display: none;
   padding: 0.5rem 0.5rem;
+  border: 3px solid salmon;
+}
+.section.active {
+  display: block;
 }
 .section input {
-  border-radius: 0.3rem;
-  padding: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+#info-exterieur {
+  display: none;
+}
+#info-exterieur.active {
+  display: block;
+  border: 1px solid purple;
 }
 .croix {
   font-style: normal;
@@ -275,17 +287,45 @@ footer p {
 #preparation-cafe.active {
   display: block;
 }
+
+#preparation-cafe button.active {
+  display: block;
+  background-color: brown;
+  color: #ccc;
+}
+
 .differente-prepa {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.4rem;
 }
-.choix-prepa.active {
-  background-color: brown !important;
-  color: #ccc;
-  border-color: brown;
+
+#marque-cafe.active {
+  display: block;
+  display: flex;
 }
+#choix-prepa {
+  display: block;
+  background-color: yellow;
+  color: #ccc;
+}
+#choix-prepa.active {
+  display: block;
+  background-color: brown;
+  color: #ccc;
+}
+
+/* Validation marque */
+
+.NouveauCafe {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 /* MEDIA QUERIE LAPTOP 768px */
 
 @media (min-width: 768px) {
