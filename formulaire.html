@@ -126,11 +126,49 @@
 
            
             <!--Étape 3 : Concentrons nous sur le café-->
-            <!--Étape 4 : Dégustation-->
+
+            <div id="degustation">
+              <h2>Passons à la dégustation</h2>
+
+<label for="date-degustation">Date de dégustation :</label>
+<input type="date" id="date-degustation" name="date-degustation" >
+<div id="afterDate" class="form-step">
+  <button type="button">Suivant</button></div>
+
+
+
+            </div>
+            <div id="avant-bouche">
+
+         
+            
+         
+            <h2>☕ Aspect Visuel</h2>
+              <h3>Apparence</h3>
+              <div class="section-avant-bouche ">
+  <label><input type="checkbox" name="aspect" value="Crème homogène"> Crème homogène</label>
+  <label><input type="checkbox" name="aspect" value="Couleur claire"> Couleur claire</label>
+  <label><input type="checkbox" name="aspect" value="Couleur foncée"> Couleur foncée</label>
+  <label><input type="checkbox" name="aspect" value="Mousse abondante"> Mousse abondante</label></div>
+            
+             <h3>👃 Odeur / Arômes</h3>
+              <div class="section-avant-bouche ">
+ <label><input type="radio" name="intensite" value="Léger"> Léger</label>
+  <label><input type="radio" name="intensite" value="Moyen"> Moyen</label>
+  <label><input type="radio" name="intensite" value="Fort"> Fort</label></div>
+<h3>Familles d'arômes :</h3>
+<div class="section-avant-bouche">
+ <button type="button" class="btn-arome">Fruité 🍋🍎 </button>
+  <button type="button" class="btn-arome">Floral 🌸🌼</button>
+  <button type="button" class="btn-arome">Chocolaté-Caramel 🍫🍬 </button>
+  <button type="button" class="btn-arome">Épicé 🌶️🫚 </button>
+  <button type="button" class="btn-arome">Boisé 🌲🍂</button></div>
+
+</div>
+              </div>
            
           </form>
-        </div>
-           
+         
       </main>
 
       <footer>
@@ -147,6 +185,6 @@
 
       <script src="index.js"></script>
        <script src="formulaire.js"></script>
- 
+ <script src="degustation.js"></script>
   </body>
 </html>

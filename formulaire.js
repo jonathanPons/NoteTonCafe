@@ -106,7 +106,7 @@ buttonFinish.addEventListener("click", () => {
   etape2.classList.toggle("active");
 });
 
-// ETAPE 2- PREPARATION DU CAFE
+// ETAPE 2- PREPARATION DU CAFE//
 
 //Etape 2
 const etape2 = document.getElementById("preparation-cafe");
@@ -188,6 +188,7 @@ addBrand.addEventListener("click", () => {
     trash.addEventListener("click", () => {
       // efface la nouvelle DIV
       nouvelleDiv.remove();
+      marquecafe.disabled = false;
       console.log(`Lieu supprimé ${NewMarque}`);
     });
     nouvelleDiv.appendChild(nouveauParagraphe);
@@ -196,8 +197,17 @@ addBrand.addEventListener("click", () => {
 
     // Le clic revient à ""
     marquecafe.value = "";
+    marquecafe.disabled = true;
+
     console.log(NewMarque);
   } else {
     alert("Veuillez rentrer une marque de café ");
+  }
+});
+// Declenche l'ajout de la marque quand la touche entrée est presse
+marquecafe.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addBrand.click();
   }
 });

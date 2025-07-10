@@ -259,6 +259,7 @@ footer p {
   font-size: var(--text-lg);
   font-family: var(--font-Titre);
   padding: 0.5rem;
+  color: brown;
 }
 
 .form-step button {
@@ -325,7 +326,52 @@ footer p {
   align-items: center;
   gap: 0.3rem;
 }
+/* ETAPE 3 */
+#degustation {
+  display: none;
+  gap: 0.4rem;
+  border: 1px solid blue;
+}
+#degustation.active {
+  display: block;
+}
 
+/* AVANT BOUCHE */
+
+#avant-bouche {
+  display: none;
+}
+#avant-bouche.active {
+  display: block;
+}
+.section-avant-bouche {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid green;
+}
+#avant-bouche h3 {
+  text-align: center;
+  margin: 0.2rem;
+  color: brown;
+}
+#avant-bouche button {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  background-color: var(--color-background);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.btn-arome {
+  background-color: var(--color-background);
+}
+#avant-bouche .btn-arome.active {
+  background-color: brown;
+  color: #ccc;
+  border-color: brown;
+}
 /* MEDIA QUERIE LAPTOP 768px */
 
 @media (min-width: 768px) {
