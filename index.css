@@ -254,6 +254,7 @@ footer p {
   justify-content: space-around;
   align-items: center;
   gap: 0.3rem;
+ 
 }
 .lieu-sauvegarde-text {
   font-size: var(--text-lg);
@@ -305,6 +306,8 @@ footer p {
 #marque-cafe.active {
   display: block;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #choix-prepa {
   display: block;
@@ -316,11 +319,44 @@ footer p {
   background-color: brown;
   color: #ccc;
 }
+#marques-sauvegardees{
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid teal
+}
+#marques-sauvegardees span:hover {
+  cursor: pointer;
+  color: brown;
+}
+.miniature-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  height: 200px;
+}
+#miniatureLieu {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px; /
+}
+.partage-Nouvelle-marque{
+  border: 1px solid fuchsia;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#miniature1{
+  display: flex;
+  
+  border : 1px solid black
+}
 /* Validation marque */
 
 .NouveauCafe {
-  border: 1px solid purple;
+  border: 1px solid lawngreen;
   display: flex;
   justify-content: space-around;
   align-items: center;

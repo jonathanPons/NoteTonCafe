@@ -106,6 +106,31 @@ buttonFinish.addEventListener("click", () => {
   etape2.classList.toggle("active");
 });
 
+// Creer la fonction pour afficher la photo prise en miniature
+
+function photoMiniature(inputElement, imageElement) {
+  inputElement.addEventListener("change", () => {
+    const fichier = inputElement.files[0];
+    if (fichier) {
+      const lecteur = new FileReader();
+      lecteur.onload = function (e) {
+        imageElement.src = e.target.result;
+        imageElement.style.display = "block";
+      };
+      lecteur.readAsDataURL(fichier);
+    }
+  });
+}
+// PHOTO DU LIEU
+const lieu1 = document.getElementById("photo-Lieu");
+const imgLieu = document.getElementById("miniatureLieu");
+photoMiniature(lieu1, imgLieu);
+// PHOTO DE L'ETIQUETTE
+
+const input1 = document.getElementById("photo-cafe");
+const img1 = document.getElementById("miniature1");
+
+photoMiniature(input1, img1);
 // ETAPE 2- PREPARATION DU CAFE//
 
 //Etape 2

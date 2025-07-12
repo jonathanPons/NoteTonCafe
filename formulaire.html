@@ -24,6 +24,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
@@ -77,14 +78,16 @@
                 type="text"
                 id="nom-Lieu"
                 placeholder="Syra Coffe, Toulouse"
-              />  <span class="croix" id="add-lieu-btn"> ➕ </span>
-             <div id="lieux-sauvegardes"> </div>
+              />  <span class="croix" id="add-lieu-btn"> ➕ </span>   
+             <div id="lieux-sauvegardes"> 
 
                 <label for="photo-Lieu"> Ajouter une photo du lieu </label>
               <input type="file" id="photo-Lieu" accept="image/*" />
-              <div id="finish-step-one" class="form-step"><button type="button">Suivant</button></div>
-           
-             </div>
+        <div class="miniature-container">
+              <img id="miniatureLieu" style="display:none; width: 100px; height: auto; " /></div>
+                 
+             </div><div id="finish-step-one" class="form-step"><button type="button">Suivant</button></div></div>
+             
  <!--Étape 2 : Préparation du café-->
              <div  id="preparation-cafe">
               <h2>Préparation du café</h2>
@@ -104,20 +107,34 @@
      
             
             <div id="marque-cafe" class="section">
-               <label for="nom-marque"> Marque du café : 
-               <input type="text" id="nom-marque" placeholder="La brulerie des filatiers, 
-               Toulouse"/> <span class="croix" id="add-marque-btn"> ➕ </span>  
               
-                 <div id="marques-sauvegardees"> </div>
-                   <label for="photo-cafe"> Prendre en photo l'etiquette </label>
-                   <input type="file" id="photo-cafe" accept="image/* capture="environment">
+              
+                 <div id="marques-sauvegardees">
+
+                   <label for="nom-marque"> Marque du café : 
+               <input type="text" id="nom-marque" placeholder="La brulerie des filatiers, 
+               Toulouse"/><span class="croix" id="add-marque-btn" >➕ </span>  </label>
+
+                 <label for="photo-cafe"> <span>Prendre en photo l'etiquette</span> </label><br>
+
+                 <input type="file" id="photo-cafe" accept="image/*" capture= "environment">
+
+               <div class="partage-Nouvelle-marque">
+<div id="miniature-container"></div>
+                    
+                    <img id="miniature1" style="display:none; width: 100px; height: auto;" /></div> 
+
+               </div> 
+
+
+                 </div>
 </div>
               <div id="finish-step-two" class="form-step"><button type="button">Suivant</button></div>
 
 
 
 
-            </div>
+            
  
 
             
