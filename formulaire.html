@@ -72,6 +72,8 @@
                 🌍 Autre
               </button>
             </div>
+
+
             <div class="section" id="info-exterieur">
               <label for="nom-Lieu"> Nom du lieu : </label>
               <input
@@ -80,13 +82,17 @@
                 placeholder="Syra Coffe, Toulouse"
               />  <span class="croix" id="add-lieu-btn"> ➕ </span>   
              <div id="lieux-sauvegardes"> 
-
+<div class="partage-nouveau-lieu">
                 <label for="photo-Lieu"> Ajouter une photo du lieu </label>
               <input type="file" id="photo-Lieu" accept="image/*" />
-        <div class="miniature-container">
-              <img id="miniatureLieu" style="display:none; width: 100px; height: auto; " /></div>
+        <div id="miniatureLieu">
+              </div></div>
                  
-             </div><div id="finish-step-one" class="form-step"><button type="button">Suivant</button></div></div>
+             </div>
+             
+             
+             <div id="finish-step-one" class="form-step"><button type="button">Suivant</button></div>
+            </div>
              
  <!--Étape 2 : Préparation du café-->
              <div  id="preparation-cafe">
@@ -117,12 +123,13 @@
 
                  <label for="photo-cafe"> <span>Prendre en photo l'etiquette</span> </label><br>
 
-                 <input type="file" id="photo-cafe" accept="image/*" capture= "environment">
+                 
 
                <div class="partage-Nouvelle-marque">
-<div id="miniature-container"></div>
+<input type="file" id="photo-cafe" accept="image/*" capture= "environment">
+                <div id="miniature-container"></div>
                     
-                    <img id="miniature1" style="display:none; width: 100px; height: auto;" /></div> 
+                    </div> 
 
                </div> 
 

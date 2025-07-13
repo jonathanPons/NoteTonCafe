@@ -107,30 +107,58 @@ buttonFinish.addEventListener("click", () => {
 });
 
 // Creer la fonction pour afficher la photo prise en miniature
+//  et la croix
 
-function photoMiniature(inputElement, imageElement) {
+function photoMiniature(inputElement, containerElement) {
   inputElement.addEventListener("change", () => {
     const fichier = inputElement.files[0];
     if (fichier) {
       const lecteur = new FileReader();
       lecteur.onload = function (e) {
-        imageElement.src = e.target.result;
-        imageElement.style.display = "block";
+        const image = document.createElement("img");
+        image.src = e.target.result;
+        image.style.width = "70%";
+        image.style.display = "block";
+
+        const wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+        wrapper.style.display = "inline-block";
+        wrapper.style.margin = "5px";
+
+        const trashPhoto = document.createElement("i");
+        trashPhoto.classList.add("fa-regular", "fa-circle-xmark");
+        trashPhoto.style.position = "absolute";
+        trashPhoto.style.top = "5px";
+        trashPhoto.style.right = "5px";
+        trashPhoto.style.cursor = "pointer";
+
+        trashPhoto.addEventListener("click", () => {
+          wrapper.remove(); // Supprime tout le bloc
+          inputElement.value = ""; // Reset du input file
+        });
+        containerElement.innerHTML = ""; // Vide avant ajout
+        wrapper.appendChild(image);
+        wrapper.appendChild(trashPhoto);
+
+        containerElement.appendChild(wrapper);
       };
       lecteur.readAsDataURL(fichier);
     }
   });
 }
+
+// PHOTO DE L'ETIQUETTE
+
+const input1 = document.getElementById("photo-cafe");
+
+const container = document.getElementById("miniature-container");
+photoMiniature(input1, container);
+
 // PHOTO DU LIEU
 const lieu1 = document.getElementById("photo-Lieu");
 const imgLieu = document.getElementById("miniatureLieu");
 photoMiniature(lieu1, imgLieu);
-// PHOTO DE L'ETIQUETTE
 
-const input1 = document.getElementById("photo-cafe");
-const img1 = document.getElementById("miniature1");
-
-photoMiniature(input1, img1);
 // ETAPE 2- PREPARATION DU CAFE//
 
 //Etape 2

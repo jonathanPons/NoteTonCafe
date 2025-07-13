@@ -322,10 +322,12 @@ footer p {
 #marques-sauvegardees{
 
   display: flex;
+  width: 100%;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid teal
+ 
 }
 #marques-sauvegardees span:hover {
   cursor: pointer;
@@ -333,7 +335,7 @@ footer p {
 }
 .miniature-container {
   display: flex;
-  justify-content: center; /* centre horizontalement */
+  justify-content: center; 
   align-items: center;
   height: 200px;
 }
@@ -342,17 +344,56 @@ footer p {
   max-height: 100%;
   border-radius: 8px; /
 }
-.partage-Nouvelle-marque{
-  border: 1px solid fuchsia;
-  display: flex;
+#miniature-container img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.partage-nouveau-lieu{
+display: flex;
   justify-content: center;
   align-items: center;
+    max-width: 300px;
+   height: auto;
+  display: block;
+  margin: 0 auto;
+
 }
-#miniature1{
-  display: flex;
+.partage-nouveau-lieu img{
+ border-radius: 8px;
+  border: 3px solid black;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+    object-fit: cover;
+
+}
+
+.partage-Nouvelle-marque{
+ 
   
-  border : 1px solid black
+   display: flex;
+  justify-content: center;
+  align-items: center;
+    max-width: 300px;
+   height: auto;
+  display: block;
+  margin: 0 auto;
 }
+.partage-Nouvelle-marque img{
+ border-radius: 8px;
+  border: 3px solid black;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+    object-fit: cover;
+}
+
 /* Validation marque */
 
 .NouveauCafe {
@@ -463,4 +504,14 @@ footer p {
     background-repeat: no-repeat; /* Pas de répétition */
     background-attachment: scroll;
   }
+  .partage-Nouvelle-marque img{
+ border-radius: 8px;
+  border: 3px solid yellow;
+ 
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+    object-fit: cover;
+}
 }
