@@ -150,7 +150,6 @@ function photoMiniature(inputElement, containerElement) {
 // PHOTO DE L'ETIQUETTE
 
 const input1 = document.getElementById("photo-cafe");
-
 const container = document.getElementById("miniature-container");
 photoMiniature(input1, container);
 
