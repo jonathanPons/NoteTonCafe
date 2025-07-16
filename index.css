@@ -194,6 +194,7 @@ footer p {
 /* ETAPE 1 */
 .container {
   border: 1px solid yellow;
+  
   padding: 0.5rem 0.5rem;
   font-family: var(--font-primary);
   font-style: italic;
@@ -457,6 +458,105 @@ footer p {
   color: #ccc;
   border-color: brown;
 }
+
+/************       REGION PAYS     ******/
+.Region-du-grain{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid green;
+
+
+
+}
+ #avant-bouche .regions.active{
+  background-color: brown;
+  color: #ccc;
+  border-color: brown;
+}
+/****** PAYS ******/
+
+/***** africins ****/
+#pays-afrique{
+  display: none;
+}
+#pays-afrique.active{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+
+#pays-afrique .Pays-Afrique.active{
+   background-color: brown;
+  color: #ccc;
+  border-color: brown;
+
+}
+
+
+/**** AM-Central *****/
+
+
+#DIV-Pays-AM{
+  display: none;
+}
+
+#DIV-Pays-AM.active{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+#DIV-Pays-AM .Pays-Am-Centrale.active
+ {
+  background-color: brown;
+  color: #ccc;
+  border-color: brown;
+}
+/*** AM-SUd ***/
+#DIV-Pays-AM-Sud{
+  display: none;
+}
+
+#DIV-Pays-AM-Sud.active{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  gap: 0.3rem;
+}
+#DIV-Pays-AM-Sud .Pays-Am-Sud.active{
+  background-color: brown;
+  color: #ccc;
+  border-color: brown;
+}
+/**** pays Asie ****/
+
+
+#DIV-Pays-Asie{
+display: none;
+}
+#DIV-Pays-Asie.active{
+   display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+#DIV-Pays-Asie .Pays-Asie.active{
+background-color: brown;
+  color: #ccc;
+  border-color: brown;
+
+}
+
 /* MEDIA QUERIE LAPTOP 768px */
 
 @media (min-width: 768px) {
@@ -514,7 +614,7 @@ footer p {
   }
   .partage-Nouvelle-marque {
  border-radius: 8px;
-  border: 3px solid yellow;
+  
  
   width: 40%;
   height: auto;
@@ -527,7 +627,7 @@ footer p {
 
 .partage-nouveau-lieu {
  border-radius: 8px;
-  border: 3px solid yellow;
+   
  
   width: 40%;
   height: auto;
