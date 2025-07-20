@@ -436,6 +436,7 @@ footer p {
   justify-content: center;
   gap: 0.4rem;
   border: 1px solid green;
+  margin-top: 0.3rem;
 }
 #avant-bouche h3 {
   text-align: center;
@@ -557,6 +558,46 @@ background-color: brown;
 
 }
 
+
+
+/******** Cursueur *****/
+
+.curseur-en-bouche{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.curseur-en-bouche input{
+  width: 50%;
+  cursor: pointer;
+ height: 1rem;
+ 
+  border-radius: 5px;
+  background: #ccc;
+ 
+ 
+}
+.curseur-en-bouche span{
+  color: darkgoldenrod;
+}
+
+/*** couleur du curseur ***/
+.curseur-en-bouche input::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input .vert {
+  background-color: green;
+}
 /* MEDIA QUERIE LAPTOP 768px */
 
 @media (min-width: 768px) {

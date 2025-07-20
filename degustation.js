@@ -52,16 +52,28 @@ SelectionRegion.forEach((Region) => {
     regionSelectionne = Region.dataset.regions;
     if (regionSelectionne === "Afrique de l'Est") {
       PaysAfricains.classList.toggle("active");
+      DivAMCENtral.classList.remove("active");
+      DivAMSud.classList.remove("active");
+      DivAsie.classList.remove("active");
     }
 
     if (regionSelectionne === "Amérique Centrale") {
       DivAMCENtral.classList.toggle("active");
+      PaysAfricains.classList.remove("active");
+      DivAsie.classList.remove("active");
+      DivAMSud.classList.remove("active");
     }
     if (regionSelectionne === "Amérique du Sud") {
       DivAMSud.classList.toggle("active");
+      PaysAfricains.classList.remove("active");
+      DivAMCENtral.classList.remove("active");
+      DivAsie.classList.remove("active");
     }
     if (regionSelectionne === "Asie-Pacifique") {
       DivAsie.classList.toggle("active");
+      PaysAfricains.classList.remove("active");
+      DivAMCENtral.classList.remove("active");
+      DivAMSud.classList.remove("active");
     }
   });
 });
@@ -119,3 +131,76 @@ function selectionDuPays(LesPays) {
 selectionDuPays(ClassAMCentral);
 selectionDuPays(ClassAmSud);
 selectionDuPays(ClassPaysAsie);
+
+// Pouvoir ouvrir qu'une liste de pays à la fois
+
+const regionsDuMonde = {
+  "Afrique de l'Est": document.getElementById("pays-afrique"),
+  "Amérique Centrale": document.getElementById("DIV-Pays-AM"),
+  "Amérique du Sud": document.getElementById("DIV-Pays-AM-Sud"),
+  "Asie-Pacifique": document.getElementById("DIV-Pays-Asie"),
+};
+SelectionRegion.forEach((Region) => {
+  Region.addEventListener("click", () => {
+    SelectionRegion.forEach((b) => b.classList.remove("active"));
+    Region.classList.add("active");
+    console.log("oui region");
+
+    const RegionChoisie = Region.dataset.regions;
+    Object.value(regionsDuMonde).forEach((div) =>
+      div.classList.remove("active")
+    );
+
+    const divCorrespondante = regionsDuMonde[RegionChoisie];
+    if (divCorrespondante) {
+      divCorrespondante.classList.add("active");
+    }
+  });
+});
+
+// CURSEUR NOTATION EN BOUCHE //
+
+//ACIDITE
+const cursorAcidite = document.getElementById("acidite");
+const scoreAcidite = document.getElementById("score-acidite");
+
+// AMERTUME
+
+const cursorAmertume = document.getElementById("amertume");
+const scoreAmertume = document.getElementById("score-amertume");
+
+// PUISSANCE
+
+const CursorPuissance = document.getElementById("puissance");
+const scorePuissance = document.getElementById("score-puissance");
+
+// DOUCEUR
+
+const cursorDouceur = document.getElementById("Douceur");
+const scoreDouceur = document.getElementById("score-douceur");
+
+// Longeur en bouche
+
+const cursorLongueur = document.getElementById("Longueur");
+const scoreLongueur = document.getElementById("score-longueur");
+
+function noteCurseur(curseur, affichage, nomCritere) {
+  curseur.addEventListener("input", () => {
+    const valeurChiffre = parseInt(curseur.value);
+    affichage.textContent = `${nomCritere}:  ${curseur.value}/10 `;
+    let couleur;
+    if (valeurChiffre < 3) {
+      couleur = "#00FF00";
+    }
+  });
+  console.log(`${nomCritere} initialisé, valeur :`, curseur.value);
+  const valeurChiffre = parseInt(curseur.value);
+  console.log(valeurChiffre);
+}
+noteCurseur(cursorAcidite, scoreAcidite, "Acidité");
+noteCurseur(cursorAmertume, scoreAmertume, "Amertume");
+noteCurseur(CursorPuissance, scorePuissance, "Puissance");
+noteCurseur(cursorDouceur, scoreDouceur, "Douceur");
+noteCurseur(cursorLongueur, scoreLongueur, "Longueur");
+
+// fonction couleur du curseur

@@ -247,13 +247,71 @@
  <label><input type="radio" name="intensite" value="Léger"> Léger</label>
   <label><input type="radio" name="intensite" value="Moyen"> Moyen</label>
   <label><input type="radio" name="intensite" value="Fort"> Fort</label></div>
-<h3>Familles d'arômes :</h3>
+
+  <h2>Saveurs en bouche</h2>
+
+
+<div class="curseur-en-bouche">
+
+  <label for="acidite"> Acidité, <span>Sensation vive ou citronnée:</span></label>
+  <input type="range" id="acidite" min="0" max="10" value="5" list="graduations">
+  <p id="score-acidite">Acidité : 5/10</p>
+
+    <label for="amertume"> Amertume, <span>Goût corsé ou sombre:</span>  </label>
+  <input type="range" id="amertume" min="0" max="10" value="5" list="graduations">
+    <p id="score-amertume"> Amertume : 5/10</p>
+
+   <label for="puissance"> Puissance, <span>Intensité globale (léger à robuste):</span> </label>
+  <input type="range" id="puissance" min="0" max="10" value="5" list="graduations">
+  <p id="score-puissance"> Puissance : 5/10</p>
+
+   <label for="Douceur">Douceur, <span>Niveau de sucre perçu (subtil à prononcé):</span> </label>
+  <input type="range" id="Douceur" min="0" max="10" value="5" list="graduations">
+   <p id="score-douceur"> Douceur : 5/10</p>
+
+  <label for="Longueur">Longueur en bouche, <span>Persistance du goût après dégustation (courte à longue)</span>: </label>
+  <input type="range" id="Longueur" min="0" max="10" value="5" list="graduations">
+   <p id="score-longueur"> Longueur en bouche : 5/10</p>
+
+<datalist id="graduations">
+  <option value="0">
+     <option value="1">
+      <option value="2"> 
+        <option value="3">
+          <option value="4">
+            <option value="5">
+              <option value="6">
+                <option value="7">
+                  <option value="8">
+                    <option value="9">
+                      <option value="10"></option>
+</datalist>
+
+
+
+</div>
+
+
+
+
+  <h3>Familles d'arômes :</h3>
 <div class="section-avant-bouche">
+
  <button type="button" class="btn-arome">Fruité 🍋🍎 </button>
   <button type="button" class="btn-arome">Floral 🌸🌼</button>
   <button type="button" class="btn-arome">Chocolaté-Caramel 🍫🍬 </button>
   <button type="button" class="btn-arome">Épicé 🌶️🫚 </button>
   <button type="button" class="btn-arome">Boisé 🌲🍂</button></div>
+
+
+  
+
+
+
+
+
+
+
 
 </div>
               </div>
