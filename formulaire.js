@@ -28,6 +28,7 @@ boutons.forEach((choixLieu) => {
     }
     choixLieu.classList.add("active");
     lieuSelectionne = choixLieu.dataset.lieu;
+    formulaireData.lieu = choixLieu.dataset.lieu;
     if (lieuSelectionne === "maison") {
       etape2.classList.add("active");
       choixLieu.classList.add("active");
@@ -117,6 +118,7 @@ function photoMiniature(inputElement, containerElement) {
       lecteur.onload = function (e) {
         const image = document.createElement("img");
         image.src = e.target.result;
+        formulaireData.photoEtiquette = e.target.result;
         image.style.width = "70%";
         image.style.display = "block";
 
@@ -182,6 +184,7 @@ boutonPrepa.forEach((unePrepa) => {
     }
 
     const choixPrepa = unePrepa.dataset.prepa;
+    formulaireData.prepa = unePrepa.dataset.prepa;
   });
 });
 
@@ -246,14 +249,14 @@ addBrand.addEventListener("click", () => {
     nouvelleDiv.appendChild(nouveauParagraphe);
     nouvelleDiv.appendChild(trash);
     divDeLaMarque.appendChild(nouvelleDiv);
-
+    formulaireData.marque = NewMarque;
     // Le clic revient à ""
     marquecafe.value = "";
     marquecafe.disabled = true;
 
     console.log(NewMarque);
   } else {
-    alert("Veuillez rentrer une marque de café ");
+    alert("Veuillez rentrer une marque de café ", formulaireData.marque);
   }
 });
 // Declenche l'ajout de la marque quand la touche entrée est presse

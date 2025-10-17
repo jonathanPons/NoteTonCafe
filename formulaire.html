@@ -54,7 +54,7 @@
       </header>
       <main>
         <div class="container">
-          <form action="" class="form-cafe">
+          <form id="form-cafe" class="form-cafe">
             <h2>Où dégustes-tu ce café ?</h2>
             <div id="choix-lieu">
               <!--Étape 1 : Où dégustes-tu ce café ?-->
@@ -287,8 +287,6 @@
                       <option value="10"></option>
 </datalist>
 
-
-
 </div>
 
 
@@ -303,7 +301,32 @@
   <button type="button" class="btn-arome">Épicé 🌶️🫚 </button>
   <button type="button" class="btn-arome">Boisé 🌲🍂</button></div>
 
+  <div class="commentaire">
+    <label for="commentaire">Avis général </label>
+<textarea name="commentaire" id="commentaire" rows="4" maxlength="500"  placeholder="Remarque ou avis général sur le café" ></textarea>
+  <small>500 caractères max</small>
 
+
+  </div>
+
+<div class="note-etoile">
+  <h3>Note globale</h3>
+  <div>
+
+  <i class="fa-regular fa-star" data-index="1"></i>
+  <i class="fa-regular fa-star" data-index="2"></i>
+  <i class="fa-regular fa-star" data-index="3"></i>
+  <i class="fa-regular fa-star" data-index="4"></i>
+  <i class="fa-regular fa-star" data-index="5"></i>
+  </div>
+ 
+
+  </div>
+
+ <div class="Bouton-enregistre">
+      <button type="submit">Enregistrer la dégustation</button></div>
+
+</div>
   
 
 
@@ -313,8 +336,8 @@
 
 
 
-</div>
-              </div>
+
+          
            
           </form>
          
