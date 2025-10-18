@@ -9,7 +9,11 @@
   box-sizing: border-box; /* Inclut padding et border dans la taille totale des éléments */
   font-family: var(--font-primary); /* Définit une police globale */
 }
-
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 /* =========================================
    🌈 VARIABLES GLOBALES
    ========================================= */
@@ -61,7 +65,7 @@ header {
   display: flex;
   justify-content: space-between; /* Titre à gauche / menu à droite */
   align-items: center;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
   background-color: var(--color-background);
   position: sticky; /* Fixe en haut au scroll */
   top: 0;
@@ -80,11 +84,8 @@ header h1 {
 header h1:hover {
   color: var(--color-primary);
 }
-header div li {
-  display: flex;
-}
+
 header a {
-  display: flex;
   text-decoration: none;
   color: var(--color-text);
   transition: color 0.3s ease;
@@ -99,11 +100,13 @@ header a:hover {
    ========================================= */
 
 .presentation {
+  position: relative;
   background-image: url(Images/pexels-machine.webp);
   background-size: cover; /* Remplit l’écran */
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  min-height: 80vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centrer verticalement */
@@ -112,6 +115,7 @@ header a:hover {
   gap: 1rem;
   padding: 1rem;
   color: var(--color-background);
+  overflow: hidden;
 }
 
 .presentation h1 {
@@ -154,16 +158,13 @@ header a:hover {
    ========================================= */
 
 main {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  max-width: var(--container-max-width);
-  width: var(--container-width);
-  margin: 2rem auto;
-  padding: 1rem;
-  gap: 1rem;
+  background-color: var(--color-background);
+
+  flex: 1;
 }
 
 /* =========================================
@@ -206,9 +207,10 @@ footer p {
 }
 
 #mobile-menu {
-  display: none;
+  position: fixed;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: var(--color-background);
   transform: translateX(-100%);
@@ -315,6 +317,31 @@ footer p {
   .button a {
     font-size: 1rem;
   }
+  #burger {
+    display: none; /* 🔸 On cache le burger sur desktop */
+  }
+
+  .presentation {
+    position: relative;
+    background-image: url(Images/pexels-machine.webp);
+    background-size: cover; /* Remplit l’écran */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--color-background);
+    overflow: hidden;
+  }
 }
 
 /* Ordinateur portable */
@@ -328,23 +355,33 @@ footer p {
   }
 
   #mobile-menu {
+    position: static; /* le menu n'est plus en position fixe */
+    transform: none; /* plus de slide */
+    display: flex; /* on affiche directement le menu */
+    justify-content: space-between;
+    height: auto; /* pas besoin de prendre tout l'écran */
+  }
+
+  #mobile-menu ul {
     display: flex;
     flex-direction: row;
-    transform: none;
-    position: static;
-    height: auto;
-    justify-content: flex-end;
-    gap: 2rem;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   #mobile-menu li {
-    font-size: var(--text-base);
     margin: 0;
+    font-size: var(--text-base);
   }
 
-  main {
-    max-width: 70ch;
+  #CloseNav {
+    display: none; /* ❌ On cache la croix car inutile sur desktop */
   }
+}
+main {
+  max-width: 70ch;
 }
 
 /* Grand écran */

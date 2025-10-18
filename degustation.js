@@ -103,6 +103,7 @@ SelectionRegion.forEach((regionBtn) => {
       // @ts-ignore
       div.classList.remove("active")
     );
+    // @ts-ignore
     const divRegion = regionsDuMonde[regionChoisie];
     if (divRegion) {
       divRegion.classList.add("active");
@@ -114,9 +115,12 @@ SelectionRegion.forEach((regionBtn) => {
 });
 
 // Fonction générique pour sélectionner un pays
+// @ts-ignore
 function selectionDuPays(listeBoutons) {
+  // @ts-ignore
   listeBoutons.forEach((btn) => {
     btn.addEventListener("click", () => {
+      // @ts-ignore
       listeBoutons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       formulaireData.paysChoisi = btn.dataset.pays;
@@ -143,10 +147,12 @@ function resetAllCountry() {
 // ===================================
 // 🍷 Curseurs de saveur
 // ===================================
+// @ts-ignore
 function noteCurseur(curseur, affichage, nomCritere) {
   curseur.addEventListener("input", () => {
     const valeurChiffre = parseInt(curseur.value);
     affichage.textContent = `${nomCritere} : ${valeurChiffre}/10`;
+    // @ts-ignore
     formulaireData[nomCritere.toLowerCase()] = valeurChiffre;
   });
 }
@@ -223,6 +229,7 @@ OdeurAvantGout.forEach((b) => {
   });
 });
 
+// @ts-ignore
 function validerFormulaire(data) {
   const erreurs = [];
 
