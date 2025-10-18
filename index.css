@@ -380,9 +380,6 @@ footer p {
     display: none; /* ❌ On cache la croix car inutile sur desktop */
   }
 }
-main {
-  max-width: 70ch;
-}
 
 /* Grand écran */
 @media (min-width: 1024px) {
@@ -394,7 +391,25 @@ main {
     font-size: 1.2rem;
   }
 
-  .container {
-    max-width: 800px;
+  .presentation {
+    position: relative;
+    background-image: url(Images/ChatGPT\ Image\ 18\ oct\ 2025\,\ 07_45_48.png);
+    background-size: cover; /* Remplit l’écran */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    width: 100vw; /* 100% de la largeur de la fenêtre */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
+    align-items: center;
+    text-align: center;
+
+    color: var(--color-background);
+    overflow: hidden;
+  }
+  main {
+    width: 100%;
   }
 }
